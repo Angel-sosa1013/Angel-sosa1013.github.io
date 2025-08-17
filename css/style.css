@@ -523,6 +523,61 @@ ul.conat_info li a:hover {
 
 /** end about section **/
 
+/** Destinations section **/
+
+.destinos-section .carousel-inner img {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    background: #fff; /* Fondo blanco para imágenes con transparencia */
+}
+
+/* Carrusel de destinos: controles fuera del contenido y más grandes */
+#destinosCarousel .carousel-control-prev,
+#destinosCarousel .carousel-control-next {
+    width: 5%;
+    min-width: 48px;
+    height: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 1;
+    background: rgba(58, 137, 168, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#destinosCarousel .carousel-control-prev {
+    left: -60px;
+}
+
+#destinosCarousel .carousel-control-next {
+    right: -60px;
+}
+
+#destinosCarousel .carousel-control-prev-icon,
+#destinosCarousel .carousel-control-next-icon {
+    background-size: 32px 32px;
+    width: 32px;
+    height: 32px;
+    filter: drop-shadow(0 0 2px #fff);
+}
+
+/* Asegura que los botones de Google Maps estén bien separados */
+.destinos-section .btn-primary {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/** end Destinations section **/
+
 
 /** service section **/
 
@@ -617,7 +672,7 @@ ul.conat_info li a:hover {
 }
 
 .vehicles .titlepage p {
-     color: #0d0202;
+     color: #0f98f8;
      padding-top: 15px;
      text-align: center;
      margin: 0 50px;
@@ -643,6 +698,15 @@ ul.conat_info li a:hover {
      margin: 0;
 }
 
+.vehicles_truck img {
+    width: 100%;
+    max-width: 250px;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
 .blac_co {
      color: #000;
      font-size: 25px;
@@ -652,56 +716,43 @@ ul.conat_info li a:hover {
      margin-top: 34px;
 }
 
-.vehicles .read_more {
-     margin-top: 0px;
-     margin: 0 auto;
+.vehicles_truck {
+    position: relative;
+    overflow: visible;
+}
+.bus-info-menu {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    padding: 20px 18px 16px 18px;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: 10;
+    transform: translateY(30px);
+}
+.vehicles_truck:hover .bus-info-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.bus-info-menu h4 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.bus-info-menu ul {
+    padding-left: 18px;
+    margin-bottom: 0;
+    font-size: 0.98rem;
 }
 
-#veh .carousel-caption {
-     position: inherit;
-     padding: 0;
-}
 
-#veh .carousel-indicators {
-     display: none;
-}
-
-#veh .carousel-control-prev,
-#veh .carousel-control-next {
-     width: 50px;
-     height: 50px;
-     background: #efedf0;
-     opacity: 1;
-     font-size: 30px;
-     color: #000;
-     border-radius: 5px;
-     top: 111%;
-     z-index: 9999;
-}
-
-#veh .carousel-control-prev:hover,
-#veh .carousel-control-next:hover,
-#veh .carousel-control-prev:focus,
-#veh .carousel-control-next:focus {
-     background: #0f98f8;
-     color: #fff;
-}
-
-#veh a.carousel-control-prev {
-     position: absolute;
-     left: 46%;
-}
-
-#veh a.carousel-control-next {
-     position: absolute;
-     right: 46%;
-     bottom: 10px;
-}
-
-.vehicles .read_more {
-     margin: 0 auto;
-     padding-top: 150px;
-}
 
 
 /** end vehicles section **/
